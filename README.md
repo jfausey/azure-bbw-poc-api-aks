@@ -6,7 +6,9 @@ project is a proof of concept from which to learn.  It is not production-worthy 
 
 When you're ready, try running (bash example) `./stand-up-poc-resources.sh 2>&1 | tee logfile` so that you can capture all output and errors to logfile but still see and respond to the script's prompts for input.
 
-There are also GitHub workflows in this project that automate 1) the build/deploy of the app that provides the API search operation and 2) the regression testing (loosely) of the API search operation.  These workflows are not mature, but they demonstrate some basic essentials that could mature into a full CI/CD pipeline over time.
+The core functionality of the Express.js app derives from concepts and sample code provided in the Salesforce documents [Get Started with the B2C Commerce API|https://developer.salesforce.com/docs/commerce/commerce-api/guide/get-started.html] and [Quick Start: B2C Commerce API and SDK|https://developer.salesforce.com/docs/commerce/commerce-api/guide/api-and-sdk-demo.html]. The POC code to search the SF demo Apparel API is a stand-in for future code that will accesses and orchestrate other SF APIs and is NOT the primary deliverable of the POC. The Azure resource automation examples, the example Helm chart to deploy a Kubernetes service, and the Jenkins build/deploy/test automation examples are the primary deliverables.
+
+There are also example GitHub workflows in this project that automate 1) the build/deploy of the app that provides the API search operation and 2) the regression testing (loosely) of the API search operation.  These workflows demonstrate some basic essentials that could mature into a full CI/CD pipeline over time using [GitHub Actions|https://github.com/features/actions]. These have been superceded by the Jenkins automation that was added subsequently.
 
 Regarding AKS set-up and deployment, see [Quickstart: Develop on Azure Kubernetes Service (AKS) with Helm](https://learn.microsoft.com/en-us/azure/aks/quickstart-helm?tabs=azure-cli.)
 - Get access to an Azure subscription with an account that has the Contributor role so you can create and destroy the subsequent resources in isolation.
